@@ -1,0 +1,578 @@
+@import vars
+@import mixins
+
+*
+  margin: 0
+  padding: 0
+
+body
+  font-family: $fontFamily
+
+html,
+body
+  height: 100%
+
+a
+  text-decoration: none
+
+button:focus
+  outline: none
+
+input:focus
+  outline: none
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+.wrapper
+  min-height: 100%
+  display: flex
+  flex-direction: column
+  overflow: hidden
+
+.top
+  flex-grow: 1
+
+.clear__bmargin
+  margin-bottom: 0 !important
+
+.center
+  padding-left: calc(50% - 570px)
+  padding-right: calc(50% - 570px)
+
+.container
+  max-width: 1140px
+  margin: auto
+
+.header
+  background: #222222
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: $heightHeader
+
+  &__right
+    display: flex
+    align-items: center
+
+  &__links
+    &__mob
+      display: none
+
+.header__search
+  margin-left: 41px
+
+.header__search:hover path
+  fill: #F16D7F
+
+.header__icons:hover path
+  fill: #F16D7F
+
+.header__icons:not(:last-child)
+  margin-right: 33px
+
+//.header__right:not(:last-child)
+  margin-right: 33px
+
+ul
+  list-style-type: none
+
+@import menu
+
+.promo
+  background: #F1E4E6
+  display: flex
+  padding-left: calc(50% - 800px)
+  padding-right: calc(50% - 800px)
+
+  &__left
+    width: 50%
+
+  &__right
+    width: 50%
+
+  &__img
+    width: 100%
+
+  &__content
+    margin-top: 30%
+    border-left: 12px solid #F16D7F
+    padding-left: 16px
+
+  &__text
+    color: #F16D7F
+
+  &__h1
+    +fontProper(48px, 900, #222222, 58px)
+
+  &__heading
+    +fontProper(32px, 600, #222222, 38px)
+
+.catalog
+  &__header
+    background: #F8F3F4
+    margin-bottom: 51px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__title
+    +fontProper(24px, 400, #F16D7F, 29px)
+    margin-top: 59px
+    margin-bottom: 60px
+
+  &__path
+    +fontProper(14px, 300, #636363, 17px)
+
+  &__path-ul
+    display: flex
+    list-style: none
+
+  &__path-item:not(:last-child):after
+    content: "\00a0/\00a0"
+
+  &__path-link
+    font-size: 14px
+    line-height: 17px
+    font-weight: 400
+    color: #222222
+
+  &__path-item:last-child &__path-link
+    color: $colorSelect
+
+  &__path-current
+    color: #F16D7F
+
+  &__filter
+    display: flex
+    margin-bottom: 64px
+
+  &__filter-left
+    +fontProper(14px, 600, #000000, 17px)
+    width: 33%
+
+  &__filter-list[open]
+    position: absolute
+    z-index: 14
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    width: 360px
+    height: auto
+    box-sizing: border-box
+    padding: 13px 16px 0 16px
+
+  &__filter-list[open] .filter__sort
+    color: #F16D7F
+
+  &__filter-list[open] .filter__sort-icon path
+    fill: #F16D7F
+
+  &__filter-list
+    position: absolute
+    background: #FFFFFF
+    z-index: 5
+
+  &__filter-right
+    display: flex
+
+  &__pagination
+    display: flex
+    padding: 15px 16px
+    border: 1px solid #C4C4C4
+    width: fit-content
+    margin: auto
+
+  &__pagination-item
+    +fontProper(16px, 300, #C4C4C4, 19px)
+    cursor: pointer
+    margin-left: 15px
+
+  &__pagination-la
+    color: #000000
+
+  &__pagination-ra
+    color: #000000
+    margin-left: 15px
+
+  &__pagination .active
+    color: #EF5B70
+
+summary::marker
+  content: none
+
+summary
+  outline: none
+
+.filter
+  &__sort-item
+    cursor: pointer
+    padding-left: 17px
+    margin-bottom: 11px
+
+  &__sort-item a
+    +fontProper(14px, 400, #6F6E6E, 17px)
+
+  &__size-text
+    font-family: 'Roboto', sans-serif
+    +fontProper(14px, 400, #6F6E6E, 16px)
+
+  &__trend-title,
+  &__size-title,
+  &__price-title
+    +fontProper(14px, 400, #6F6E6E, 17px)
+    display: flex
+    margin-bottom: 2px
+    font-style: normal
+
+  &__size
+    background: #fff
+    cursor: pointer
+
+  &__size-body
+    padding: 7px 30px 8px 9px
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    position: absolute
+    z-index: 1
+
+  &__size-item
+    display: flex
+    align-items: center
+    margin-bottom: 3px
+
+  &__size-item input
+    margin-right: 9px
+
+  &__sort
+    display: flex
+    cursor: pointer
+    margin-bottom: 16px
+
+  &__sort-icon
+    display: block
+    height: 10px
+    width: 15px
+    margin-left: 11px
+    margin-top: 3px
+  /* background: url("../img/sd.svg") no-repeat center */
+
+  &__sort1,
+  &__sort2,
+  &__sort3
+    +fontProper(14px, 400, #EF5B70, 17px)
+    padding-left: 11px
+    padding-top: 11px
+    padding-bottom: 11px
+    border-left: 5px solid #EF5B70
+    border-bottom: 1px solid #EBEBEB
+    margin-bottom: 18px
+
+  &__sort-ad
+    display: block
+    height: 10px
+    width: 15px
+    margin-left: 11px
+    margin-top: 3px
+    background: url("../img/ad.svg") no-repeat center
+
+.sale
+  padding-top: 64px
+  padding-bottom: 96px
+
+  &__box
+    display: flex
+    margin-bottom: 30px
+
+  &__item
+    display: flex
+    position: relative
+
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  &__text
+    +fontProper(16px, 400, #FFFFFF, 19px)
+    text-align: center
+
+  &__heading
+    +fontProper(24px, 600, #F16D7F, 29px)
+    text-align: center
+
+  &__img
+    width: 100%
+
+  &__item:not(:last-child)
+    margin-right: 30px
+
+.product__cart
+  margin-right: 11px
+
+.products
+  &__header
+    text-align: center
+    margin-bottom: 48px
+
+  &__h2
+    +fontProper(30px, 400, #222222, 36px)
+
+  &__head
+    +fontProper(14px, 400, #9F9F9F, 17px)
+
+  &__box
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    position: relative
+    background: #F8F8F8
+    width: calc(100% / 3 - 20px)
+    margin-bottom: 30px
+    transition: transform .3s
+
+  &__item:hover
+    transform: scale(1.03)
+
+  &__item:hover .products__img
+    filter: brightness(50%)
+
+  &__item:hover .products__add
+    display: flex
+
+  &__item:not(:nth-child(3n+3))
+    margin-right: 30px
+
+  &__img
+    width: 100%
+
+  &__content
+    padding: 24px 16px 20px
+
+  &__heading
+    display: block
+    +fontProper(13px, 400, #000000, 16px)
+    margin-bottom: 12px
+
+  &__text
+    +fontProper(14px, 300, #5D5D5D, 17px)
+    margin-bottom: 18px
+
+  &__price
+    +fontProper(16px, 400, #F16D7F, 19px)
+
+  &__add
+    display: none
+    justify-content: center
+    align-items: center
+    height: 44px
+    padding-left: 14px
+    padding-right: 16px
+    border: 1px solid #fff
+    +fontProper(14px, 400, #FFFFFF, 17px)
+    position: absolute
+    top: calc(25% + 22px)
+    left: calc(50% - 70px)
+    cursor: pointer
+
+  &__add:hover
+    color: #F16D7F
+    background-color: #fff
+
+  &__add:hover .product__cart path
+    fill: #F16D7F
+
+  &__bottom
+    margin-top: 18px
+    text-align: center
+
+  &__button
+    background: transparent
+    padding: 15px 39px 14px 39px
+    border: 1px solid #F16D7F
+    cursor: pointer
+    box-sizing: border-box
+    transition: background .3s
+
+  &__button-text
+    +fontProper(16px, 400, #F16D7F, 19px)
+    cursor: pointer
+
+  &__button:hover
+    background: #F16D7F
+    border: 1px solid #F16D7F
+    color: #FFFFFF
+    cursor: pointer
+
+  &__button:focus
+    outline: none
+
+  &__button:hover > span
+    box-sizing: border-box
+    color: #FFFFFF
+
+.footer
+  margin-top: 95px
+  background: #222222
+  //position: fixed
+  //bottom: 0
+  //width: -webkit-fill-available
+
+  &__head
+    display: flex
+    justify-content: center
+
+  &__head-item
+    margin-top: 104px
+    margin-bottom: 104px
+    text-align: center
+
+  &__head-item:not(:last-child)
+    margin-right: 30px
+
+  &__head-icon
+    margin-bottom: 28px
+
+  &__head-title
+    +fontProper(19px, 400, #FBFBFB, 24px)
+    margin-bottom: 16px
+
+  &__head-text
+    +fontProper(13px, 300, #FBFBFB, 17px)
+    text-align: center
+
+  &__background
+    position: relative
+    background: url('../img/footerbgfiltr.png'), url('../img/footerbg.jpg') no-repeat, center
+    background-size: cover
+    min-height: 448px
+
+  &__backgroun-img
+    width: 100%
+
+  &__content
+    position: absolute
+    top: 100px
+    left: 0
+    //height: 100%
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    box-sizing: border-box
+  /*    padding: 0 calc(50% - 570px);*/
+
+  &__content-left
+    width: 50%
+
+  &__left-info
+    text-align: center
+    width: 62%
+
+  &__content-right
+    width: 50%
+    text-align: center
+
+  &__bottom
+    display: flex
+    justify-content: space-between
+
+  &__copyright
+    display: flex
+    +fontProper(16px, 400, #FBFBFB, 19px)
+    height: 100%
+    align-items: center
+
+  &__bottom-right
+    display: flex
+    align-items: center
+    margin-top: 25px
+    margin-bottom: 23px
+
+  &__bottom-right a:not(:last-child)
+    margin-right: 15px
+
+.subscribe
+  &__img
+    margin-bottom: 30px
+
+  &__inftext
+    +fontProper(20px, 400, #222222, 24px)
+    text-align: center
+
+  &__inftext-ital
+    font-style: italic
+
+  &__text
+    +fontProper(18px, 400, #222222, 30px)
+    text-align: center
+    margin-bottom: 32px
+
+  &__text-bold
+    +fontProper(24px, 700, #222222, 40px)
+    text-align: center
+
+  &__email
+    background: #E1E1E1
+    +fontProper(14px, 700, #222222, 36px)
+    opacity: .67
+    padding: 7px 22px 6px 22px
+    border: none
+    border-top-left-radius: 25px
+    border-bottom-left-radius: 25px
+
+  &__email:focus,
+  &__submit:focus
+    outline: none
+
+  &__submit
+    background: #F16D7F
+    border-top-right-radius: 25px
+    border-bottom-right-radius: 25px
+    +fontProper(14px, 400, #FFFFFF, 36px)
+    text-align: center
+    padding: 7px 14px 6px 8px
+    border: 0
+    margin-left: -3px
+    cursor: pointer
+
+.social
+  &__icons:hover path:first-child
+    fill: #F16D7F
+    cursor: pointer
+
+  &__icons:hover path:last-child
+    fill: #FFFFFF
+    stroke: #FFFFFF
+    cursor: pointer
+
+/*-------------------------begin product ------------------------------------*/
+
+@import products
+
+/*-------------------------end product ------------------------------------*/
+
+/*-------------------------begin cart ------------------------------------*/
+
+@import cart
+
+/*-------------------------end cart ------------------------------------*/
+
+/*-------------------------begin registration ------------------------------------*/
+
+@import registration
+
+/*-------------------------end registration ------------------------------------*/
+
+
+@import media

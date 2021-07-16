@@ -1,0 +1,93 @@
+.products
+  &__promo
+    background: #F7F7F7
+    text-align: center
+    //margin-bottom: 664px
+
+    &-img
+      max-width: 100%
+
+  &__order
+    position: relative
+
+    &-button
+      padding: 9px 73px 9px 24px
+      border: 1px solid #FF6A6A
+      background: transparent
+      cursor: pointer
+
+    &-button:hover
+      background: $colorSelect
+      border: 1px solid $colorSelect
+      color: #FFFFFF
+      cursor: pointer
+
+    &-button:hover .product__order-carticon path
+      fill: #FFFFFF
+
+    &-button:focus
+      outline: none
+
+    &-button:hover > span
+      box-sizing: border-box
+      color: #FFFFFF
+
+    &-button
+      padding: 9px 57px 9px 24px
+      border: 1px solid #FF6A6A
+      background: transparent
+      cursor: pointer
+
+.product
+  &__order
+    &-buttext
+      color: #FF6A6A
+      display: flex
+      align-items: center
+      justify-content: center
+
+    &-carticon
+      margin-right: 24px
+
+    &-cart
+      padding: 64px 250px 64px 250px
+      position: relative
+      top: -50px
+      border: 1px solid #EAEAEA
+      background: #FFFFFF
+      max-width: 1140px
+      box-sizing: border-box
+      text-align: center
+
+    &-h3
+      +fontProper(14px, 300, $colorSelect, 17px)
+
+    &-h2
+      margin-top: 12px
+      +fontProper(18px, 300, #4D4D4D, 22px)
+
+    &-text
+      text-align: center
+      margin-top: 48px
+      +fontProper(14px, 300, #5E5E5E, 17px)
+
+    &-price
+      +fontProper(24px, 300, #EF5B70, 29px)
+      margin-top: 32px
+
+    &-line
+      margin-top: 64px
+      margin-bottom: 64px
+
+    &-color,
+    &-size,
+    &-quantity
+      +fontProper(14px, 400, #6F6E6E, 17px)
+
+    &-color,
+    &-size
+      margin-right: 23px
+
+    &-nav
+      margin-bottom: 48px
+

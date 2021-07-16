@@ -1,0 +1,45 @@
+.nav
+  &__menu
+    position: absolute
+    top: $heightHeader
+    right: -232px
+    width: 232px
+    padding: 37px 34px 32px
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    box-sizing: border-box
+    transition: right .3s
+    z-index: 10
+    //display: none
+    //right: 0
+
+  &__catalog
+    +fontProper(14px, 400, $colorSelect, 17px)
+    text-decoration: none
+    text-transform: uppercase
+
+  &__item
+    +fontProper(14px, 400, #222222, 17px)
+    text-decoration: none
+    margin: 11px 21px
+    display: block
+
+  &__h3
+    +fontProper(14px, 700, #222222, 16.8px)
+    margin-bottom: 24px
+
+  &__close
+    position: absolute
+    top: 16px
+    right: 16px
+
+    &:hover svg path
+      fill: $colorSelect
+
+#switcher
+  display: none
+
+  &:checked ~ .nav__menu
+    right: 0
+    //display: block
+

@@ -1,0 +1,285 @@
+//mobile 768px
+@media (max-width: 1023px)
+  .center
+    padding: 0 calc(50% - 368px)
+
+  .sale__box
+    margin-bottom: 16px
+
+  .sale__item:not(:last-child)
+    margin-right: 16px
+
+  .products__item:not(:nth-child(3n+3))
+    margin-right: 0
+
+  .products__item
+    width: calc(100% / 2 - 8px)
+    margin-bottom: 16px
+
+    &:not(:nth-child(2n))
+      margin-right: 16px
+
+  .footer
+    &__head
+      flex-direction: column
+
+    &-item:not(:last-child)
+      margin-right: 0
+
+    &-item
+      margin-top: 48px
+      margin-bottom: 0
+
+    &-item:last-child
+      margin-bottom: 64px
+
+    &__content
+      top: 0
+      flex-direction: column
+
+    &-right
+      width: 500px
+      margin-bottom: 140px
+
+  .footer__left-info
+    width: 100%
+    margin-top: 50px
+
+  .product__order-cart
+    padding: 64px 106px
+
+  .cart
+    &__left
+      width: 100%
+      margin: 0 auto
+
+    &__body
+      flex-direction: column
+
+    &__right
+      width: 100%
+      flex-direction: row
+      justify-content: space-between
+
+    &__shipping
+      width: 50%
+      margin-right: 15px
+
+      &-proceed
+        padding: 15px 30px
+
+  .reg
+    &__left
+      margin-right: 22px
+
+    &__title
+      +fontProper(16px, 300,  #000000, 19px)
+
+    &__subtext
+      +fontProper(16px, 300,  #000000, 19px)
+
+    &__item
+      +fontProper(16px, 300,  #000000, 19px)
+
+    &__name
+      &-first
+        padding-right: 177px
+
+      &-second
+        padding-right: 177px
+
+    &__form-but
+      padding: 16px 20px
+
+
+//mobile 320px
+@media (max-width: 767px)
+  .center
+    padding: 0 16px
+
+  .nav
+    &__menu
+      width: 100%
+      right: -100%
+      min-height: calc(100vh - #{$heightHeader})
+      z-index: 1
+      padding-top: 64px
+
+    &__close
+      display: none
+
+  .header__icons
+    margin-right: 0 !important
+
+  .header__links
+    display: none
+
+    &__mob
+      background: #999
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 48px
+      display: flex
+      justify-content: center
+      align-items: center
+
+  .sale__item_big
+    height: 111px
+
+  .promo
+    &__left
+      display: none
+
+    &__right
+      width: 100%
+      display: flex
+      justify-content: center
+
+    &__h1
+      +fontProper(38px, 900,  #222222, 45px)
+
+    &__heading
+      +fontProper(20px, 700,  #222222, 24px)
+
+    &__content
+      margin-bottom: 30%
+
+  .sale
+    padding-bottom: 64px
+
+    &__box
+      flex-direction: column
+      margin-bottom: 0
+
+    &__item
+      margin-right: 0
+      margin-bottom: 32px
+
+      &:not(:last-child)
+        margin-right: 0
+
+  .products__item
+    width: 100%
+
+    &:not(:nth-child(2n))
+      margin-right: 0
+
+  .footer__background
+    height: 634px
+
+  .subscribe__email
+    padding-right: 27px
+
+  .footer__content-left
+    width: 100%
+
+  .footer__content-right
+    width: 300px
+
+  .footer__bottom
+    flex-direction: column-reverse
+
+  .footer__copyright
+    display: block
+    text-align: center
+
+  .footer__bottom-right
+    justify-content: center
+
+  .catalog
+    &__header
+      flex-wrap: wrap
+      justify-content: center
+      padding-bottom: 46px
+
+    &__title
+      margin-top: 24px
+      margin-bottom: 32px
+
+    //&__path
+      margin-bottom: 46px
+
+  .catalog__filter-list[open]
+    width: 290px
+
+  .filter__header
+    display: none
+
+  .catalog__filter-left
+    width: 10%
+
+  .catalog__filter-list[open]
+    width: 290px
+
+  .filter__trend-title,
+  .filter__size-title,
+  .filter__price-title
+    font-size: 13px
+
+  .product__order-cart
+    padding: 64px 24px
+
+  .cart
+    &__text
+      padding: 13px 53px 37px 17px
+
+      &-title
+        +fontProper(16px, 400,  #222222, 19px)
+
+    &__product
+      &-price
+        +fontProper(16px, 400,  #575757, 19px)
+
+      &-color
+        +fontProper(16px, 400,  #575757, 19px)
+
+      &-size
+        +fontProper(16px, 400,  #575757, 19px)
+
+      &-quantity
+        +fontProper(16px, 400,  #575757, 19px)
+
+      &-quaninput
+        +fontProper(16px, 400,  #575757, 19px)
+
+    &__item-img
+      width: 45%
+
+    &__bottom
+      &-clear
+        padding: 9px 5px
+
+      &-cleartext
+        +fontProper(11px, 400,  #A4A4A4, 14px)
+
+      &-continue
+        padding: 9px 5px
+
+      &-conttext
+        +fontProper(11px, 400,  #A4A4A4, 14px)
+
+    &__right
+      flex-direction: column
+
+    &__shipping
+      width: 100%
+
+      &-proceed
+        padding: 15px 7px
+
+      &-proceedtext
+        +fontProper(12px, 400,  $colorSelect, 14px)
+        padding: 9px 18px
+
+  .reg
+    &__body
+      flex-direction: column
+
+    &__left
+      margin-right: 0
+      margin-bottom: 40px
+
+    &__form-but
+      padding: 16px 10px

@@ -1,0 +1,190 @@
+.header__cart
+  position: relative
+
+  &-count
+    position: absolute
+    background: #F16D7F
+    color: white
+    border-radius: 50%
+    width: 19px
+    height: 19px
+    text-align: center
+    right: -10px
+    top: -20px
+    +fontProper(12px, 400, white, 19px)
+
+.cart
+  &__body
+    margin-top: 96px
+    display: flex
+    justify-content: space-between
+
+  &__left
+    width: 55%
+
+  &__right
+    width: 35%
+    display: flex
+    flex-direction: column
+
+  &__item-img
+    max-width: 262px
+
+  &__item
+    position: relative
+    display: flex
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+    margin-bottom: 40px
+    max-height: 306px
+
+  &__text
+    padding: 22px 97px 62px 31px
+
+    &-title
+      +fontProper(24px, 400, #222222, 29px)
+      margin-bottom: 42px
+
+    &-link
+      color: #222222
+
+  &__product
+    &-price
+      +fontProper(22px, 400, #575757, 26px)
+      margin-bottom: 6px
+
+    &-price span
+      color: #EF5B70
+
+    &-color
+      +fontProper(22px, 400, #575757, 26px)
+      margin-bottom: 6px
+
+    &-size
+      +fontProper(22px, 400, #575757, 26px)
+      margin-bottom: 6px
+
+    &-quantity
+      +fontProper(22px, 400, #575757, 26px)
+
+    &-fquantity
+      display: flex
+
+    &-quaninput
+      margin-left: 24px
+      width: 44px
+      +fontProper(18px, 400, #575757, 21px)
+      text-align: center
+      border: 1px solid #EAEAEA
+
+  &__cross-close
+    position: absolute
+    top: 22px
+    right: 22px
+    cursor: pointer
+
+  &__cross-pic path
+    transition: fill 0.3s
+
+  &__cross-link:hover .cart__cross-pic path
+    fill: #F16D7F
+
+  &__bottom
+    &-but
+      padding-top: 32px
+      padding-bottom: 33px
+      display: flex
+      justify-content: space-between
+
+    &-clear,
+    &-continue
+      padding: 17px 41px
+      border: 1px solid #A4A4A4
+      background: transparent
+      cursor: pointer
+      transition: background .3s
+
+      &:hover
+        background: #F16D7F
+        border: 1px solid #F16D7F
+
+      &:hover span
+        color: #FFFFFF
+
+    &-cleartext,
+    &-conttext
+      +fontProper(14px, 300, #A4A4A4, 17px)
+
+  &__shipping
+    &-title
+      +fontProper(16px, 300, #222222, 19px)
+      margin-top: 17px
+      margin-bottom: 20px
+
+    &-proceed
+      border: 1px solid $colorSelect
+      padding: 15px 43px
+      background: transparent
+      cursor: pointer
+      color: $colorSelect
+      width: 100%
+      transition: background .3s
+
+      &:hover
+        border: 1px solid $colorSelect
+        background: $colorSelect
+
+      &:hover span
+        color: #FFFFFF
+
+    &-proceedtext
+      +fontProper(16px, 300, $colorSelect, 19px)
+
+    &-city,
+    &-state,
+    &-zip
+      display: block
+      padding: 13px 16px
+      margin-bottom: 20px
+      +fontProper(14px, 300, #B1B1B1, 16px)
+      border: 1px solid #B1B1B1
+      width: 100%
+      box-sizing: border-box
+
+    &-sub
+      border: 1px solid #A4A4A4
+      padding: 10px 14px 12px 10px
+      background: transparent
+      cursor: pointer
+      transition: background .3s
+
+      &:hover
+        background: #F16D7F
+        border: 1px solid #F16D7F
+
+      &:hover span
+        color: #FFFFFF
+
+    &-subtext
+      +fontProper(11px, 300, #A4A4A4, 13px)
+
+  &__account
+    margin-top: 57px
+    background: #F5F3F3
+    padding: 39px 43px
+
+    &-h4
+      +fontProper(11px, 400, #A4A4A4, 13px)
+      margin-bottom: 12px
+      text-align: right
+
+    &-h3
+      +fontProper(16px, 300, #222222, 19px)
+      text-align: right
+
+    &-h3 span
+      +fontProper(16px, 700, $colorSelect, 19px)
+
+    &-line
+      border: 1px solid #E2E2E2
+      margin-top: 21px
+      margin-bottom: 17px

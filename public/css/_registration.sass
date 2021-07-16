@@ -1,0 +1,82 @@
+.reg
+  &__body
+    margin-top: 64px
+    display: flex
+
+  &__left
+    display: flex
+    flex-direction: column
+    margin-right: 128px
+    width: 100%
+
+  &__name
+    +fontProper(16px, 300, #222222, 19px)
+    margin-bottom: 20px
+
+  &__name-first,
+  &__name-second
+    display: block
+    +fontProper(13px, 300, #B1B1B1, 16px)
+    padding: 13px 17px 13px 17px
+    margin-bottom: 20px
+
+  &__sex
+    margin-bottom: 33px
+
+  &__sex-male,
+  &__sex-fmale
+    margin-right: 10px
+
+  &__sex-label
+    margin-right: 20px
+    +fontProper(11px, 300, #000000, 13px)
+
+  &__name-email,
+  &__name-pass,
+  &__name-phone
+    display: block
+    padding: 13px 17px 13px 17px
+    +fontProper(13px, 300,  #B1B1B1, 16px)
+    margin-bottom: 20px
+
+  &__text
+    +fontProper(13px, 300,  #B1B1B1, 16px)
+    margin-bottom: 39px
+
+  &__form-but
+    width: 45%
+    padding: 16px 29px
+    background: transparent
+    border: 1px solid $colorSelect
+    color: $colorSelect
+    cursor: pointer
+    transition: background .3s
+
+  &__form-but:hover
+    background: $colorSelect
+
+  &__form-but:hover span
+    color: #FFFFFF
+
+  &__form-but:hover .reg__form-butra path
+    fill: #FFFFFF
+
+  &__form-butra
+    margin-left: 20px
+
+  &__title
+    +fontProper(24px, 300,  #000000, 29px)
+    margin-bottom: 22px
+
+  &__subtext
+    +fontProper(24px, 300,  #000000, 29px)
+    margin-bottom: 21px
+
+  &__item
+    +fontProper(24px, 300,  #000000, 29px)
+    margin-bottom: 16px
+    margin-left: 28px
+    padding-left: 20px
+
+  &__list
+    list-style-image: url("../img/dal.svg")
