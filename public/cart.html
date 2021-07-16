@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
     <div class="wrapper">
@@ -18,7 +18,7 @@
             <header class="header center">
                 <div class="header__left">
                     <a href="index.html">
-                        <img src="../img/logo.svg" alt="logo">
+                        <img src="../public/img/logo.svg" alt="logo">
                     </a>
                     <a href="#">
                         <svg class="header__search header__icons" width="27" height="28" viewBox="0 0 27 28" fill="none"
@@ -114,6 +114,7 @@
                 </div>
                 <div class="cart__body center">
                     <div class="cart__left">
+                        <div class="cart__cards"></div>
                         <div class="cart__bottom-but">
                             <button type="button" class="cart__bottom-clear">
                                 <span class="cart__bottom-cleartext">CLEAR SHOPPING CART</span>
@@ -151,7 +152,7 @@
                 <div class="footer__content center">
                     <div class="footer__content-left">
                         <div class="footer__left-info">
-                            <img class="subscribe__img" src="../img/subsface.png" alt="subscribe face">
+                            <img class="subscribe__img" src="../public/img/subsface.png" alt="subscribe face">
                             <p class="subscribe__inftext">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
                                 <span class="subscribe__inftext-ital">a pulvinar purus condimentum“</span></p>
                         </div>
@@ -230,5 +231,6 @@
             </div>
         </footer>
     </div>
+    <script type="module" defer src="../public/js/main.js"></script>
 </body>
 </html>
