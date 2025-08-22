@@ -1,27 +1,24 @@
-import eventEmmiter from '../helpers/eventEmmiter.js';
+import eventEmitter from '../helpers/eventEmitter.js';
 
 
 export default class GoodList {
 
     constructor() {
         this._goodList = [];
-        this._eventEmmiter = eventEmmiter;
+        this._eventEmitter = eventEmitter;
     }
 
     load(callback, goodClass){
-
         callback().then(data => {
-
             this._goodList = data.map(item => new  goodClass(item));
 
-            this._eventEmmiter.emit('loaded');
+            console.log('good list ', this._goodList);
 
+            this._eventEmitter.emit('loaded');
         });
-
     }
 
     add(good) {
-
         this._goodList.push(good);
     }
 
@@ -30,7 +27,7 @@ export default class GoodList {
     }
 
     get(id) {
-        return this._goodList.find(good => good.id == id);
+        return this._goodList.find(good => good.id === id);
     }
 
     getAll() {
@@ -38,14 +35,10 @@ export default class GoodList {
     }
 
     getById(id) {
-        return this.goods.find(good => good.id === id);
+        return this._goodList.find(good => good.id === id);
     }
 
     getSumGoodsList() {
-
-        const sumGoodsList = this.goods.reduce((acc, num) => acc + num.price, 0);
-
-        return sumGoodsList;
+        return this._goodList.reduce((acc, num) => acc + num.price, 0);
     }
-
 }

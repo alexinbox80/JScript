@@ -12,31 +12,29 @@ export default class Cart extends GoodList {
     }
 
     add(good) {
-
-        const findGood = this._goodList.find(item => item.id == good.id);
+        const findGood = this._goodList.find(item => item.id === good.id);
 
         if (findGood) {
-
             findGood.add();
-
         } else {
-
             super.add(good);
-
         }
 
-        this._eventEmmiter.emit('added', good.id);
+        this._eventEmitter.emit('added', good.id);
+
+        console.log('good list ', this._goodList);
+        console.log('event emitter ', this._eventEmitter);
     }
 
     decrease(id) {
-        const findGood = this._goodList.filter(item => item.id == id);
+        const findGood = this._goodList.filter(item => item.id === id);
 
         if(findGood.quantity > 1) {
             findGood.remove();
         } else {
             super.remove(id);
         }
-        this._eventEmmiter.emit('removed', id);
+        this._eventEmitter.emit('removed', id);
     }
 
     getCount() {

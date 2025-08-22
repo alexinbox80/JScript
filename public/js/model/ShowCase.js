@@ -2,7 +2,7 @@ import GoodList from './GoodList.js';
 import dataHandler from '../helpers/dataHandler.js'
 import Good from './Good.js';
 
-export default class Showcase extends GoodList {
+export default class ShowCase extends GoodList {
     constructor() {
         super();
     }
@@ -10,5 +10,4 @@ export default class Showcase extends GoodList {
     load() {
         return super.load(dataHandler.getCatalog.bind(dataHandler), Good);
     }
-
 }

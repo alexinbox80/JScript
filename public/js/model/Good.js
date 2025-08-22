@@ -25,5 +25,4 @@ export default class Good {
     get color() { return this._color; }
 
     get discount() { return this._discount; }
-
 }

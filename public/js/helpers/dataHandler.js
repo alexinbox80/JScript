@@ -1,5 +1,5 @@
 export default {
-    _url: '/Lesson05/api/v1/',
+    _url: '../../../api/v1/',
 
     getCatalog(errorCallBack) {
         return fetch(`${this._url}catalogData.json`)

@@ -1,6 +1,6 @@
 //товар лежащий в корзине
 import Good from './Good.js';
-import eventEmmiter from '../helpers/eventEmmiter.js';
+import eventEmitter from '../helpers/eventEmitter.js';
 
 export default class PurchasedGood extends Good {
     constructor(goodData, quantity = 1) {
@@ -9,7 +9,7 @@ export default class PurchasedGood extends Good {
 
         //this._id = goodData.id;
         this._quantity = quantity;
-        this._eventEmmiter = eventEmmiter;
+        this._eventEmitter = eventEmitter;
     }
 
     get price() { return this._price * this._quantity; }
