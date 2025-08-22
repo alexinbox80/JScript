@@ -14,7 +14,7 @@ export default class CartView {
                                 <div class="cart__product-size">Size: ${this._data.size}</div>
                                 <div class="cart__product-fquantity">
                                     <label class="cart__product-quantity" for="cart__product-quan1">Quantity:</label>
-                                    <input class="cart__product-quaninput" type="number" id="cart__product-quan1" step="1"
+                                    <input class="cart__product-quaninput" type="number" id="cart__product-quan${this._data.id}" step="1"
                                            min="1" max="27" value="${this._data.quantity}">
                                 </div>
                             </div>

@@ -82,7 +82,7 @@ export default {
                         card.render($product, 'beforeend');
                         card.setAddHandler(this._addToCart.bind(this));
                     }
-                    count += 1;
+                    count++;
                 }
             );
         }
